@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script defer src="./script.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>BlackJack Project</title>
+    <title>Wars Card Game</title>
 </head>
 <body>
       <center>
@@ -17,9 +17,11 @@
       <div id="cards_player">
       </div>
       <br>
+      <span class="span1" id="player_total"></span>
       <button class="hover" id="button" onclick="getGameStarted()">Start New Game</button>
       <span class="span" id="remain_play"></span>
       <button class="hover" id="button" onclick="nextTurn()">Draw Card</button>
+      <span class="span2" id="computer_total"></span>
       <br>
       Computer Card Value: <span class="span" id="val_comp"></span><br><br>
       <div id="cards_computer">
@@ -27,8 +29,7 @@
       
       <!-- <span class="span" id="card_image"></span> -->
       <br><br>
-
-        </center>
-
+      </h2>
+      </center>
 </body>
 </html>
