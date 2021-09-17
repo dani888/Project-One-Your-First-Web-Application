@@ -12,22 +12,41 @@
 <body>
       <center>
       <h1>Welcome to Wars Card Game!</h1>
+      <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <div>
+          <div class="info">
+            <i class="icon-info-sign"></i>
+
+            <span class="extra-info">
+              <b>Wars Card Game Guide:<br><br>
+              1.) The game starts off with a shuffled deck of 52 cards.<br><br>
+              2.) To start the game press the Start New Game button!<br><br>
+              3.) There are 26 card draws in a set using the Draw Button.<br><br>
+              <center>You can now draw cards!</center><br><br>
+              4.) To earn points you hopefully will get a higher card value then the computer.<br><br>
+              5.) If You and the computer get the same card value you will draw another set of cards and whoever wins the round after the draw will get 3 Points!<br><br>
+              6.) You and the Computer will have 20 Health Points at the start of the game. At the end of each set of cards the difference in points will determine how much health is lost for the person who lost the round.<br><br>
+              7.) The Goal is to get the computers health points to 0 to Win the game.<br><br>
+              <center>Good Luck!</b></center>
+            </span>
+          </div>
+      </div>
       <h2>
       Player Card Value: <span class="span" id="val_play"></span><br><br>
       <div id="cards_player">
       </div>
       <br>
-      <span class="span1" id="player_total"></span>
+      <span class="span1" id="player_total">Play Score 0</span>
       <button class="hover" id="button" onclick="getGameStarted()">Start New Game</button>
       <span class="span" id="remain_play"></span>
       <button class="hover" id="button" onclick="nextTurn()">Draw Card</button>
-      <span class="span2" id="computer_total"></span>
+      <span class="span2" id="computer_total">Comp Score 0</span>
       <br>
       Computer Card Value: <span class="span" id="val_comp"></span><br><br>
       <div id="cards_computer">
       </div>
       
-      <!-- <span class="span" id="card_image"></span> -->
+      <!-- info button https://codepen.io/EasyBoarder/pen/Lkzzjy</span> -->
       <br><br>
       </h2>
       </center>
