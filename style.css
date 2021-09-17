@@ -59,21 +59,54 @@
     100% { background-position: 0 0; }
 }
 /* BUTTON ^ */
-/* body {
-  margin: 0;
-  font-family: Helvetica;
-  background-image:url(https://images.unsplash.com/photo-1498462440456-0dba182e775bixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+body {
+  /* margin: 0 */
+  background-image:url("https://images.unsplash.com/photo-1595280503243-a79c68afe418?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80");
   background-size: cover;
-
-} */
+}
 
 #player_total{
-  padding-right: 10px;
-  padding-left: 10px;
-  border-style: dotted;
+  padding: 10px 10px 10px 10px;
+  border-style: solid;
 }
 #computer_total{
-  padding-right: 10px;
-  padding-left: 10px;
-  border-style: dotted;
+  padding: 10px 10px 10px 10px;
+  border-style: solid;
 }
+/* info icon */
+/* Credit to: https://codepen.io/EasyBoarder/pen/Lkzzjy */
+* {
+  transition: all 1.2s ease;
+}
+
+.extra-info {
+  display: none;
+  line-height: 30px;
+  font-size: 20px;
+	position: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.75)), url(https://images.unsplash.com/photo-1529480384838-c1681c84aca5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80);
+  background-size: cover;
+  border-radius: 50px;
+  color: black;
+  font-family: "URW Chancery L", cursive;
+}
+
+.info:hover .extra-info {
+  display: block;
+}
+
+.info {
+  font-size: 25px;
+  padding-left: 5px;
+  width: 20px;
+  border-radius: 15px;
+}
+
+.info:hover {
+  /* background-color: white; */
+  padding: 5px 5px 5px 5px;
+  width: 850px;
+  text-align: left !important;
+}
+/* info icon */
