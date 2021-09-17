@@ -1,3 +1,5 @@
+// (function(){
+
 const $card_image = $('#card_image');
 const $val_play = $('#val_play');
 const $val_comp = $('#val_comp');
@@ -11,6 +13,8 @@ let prevCard_comp = null;
 function getGameStarted (){
   valTotal_playScore = 0;
   valTotal_compScore = 0;
+  document.getElementById('remain_play').innerHTML = 26;
+  render();
   const promise = $.ajax({
       url:'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1'
   });
@@ -146,3 +150,6 @@ async function nextTurn(){
     let comp_score = await getCardComputer(deck)
     scoreBoard(play_score,comp_score)
 }
+
+
+// })()
