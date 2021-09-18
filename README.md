@@ -6,7 +6,6 @@ A Simple Web Application Where you can play the cards War game against the compu
 - HTMLt
 - CSS3
 - JavaScript
-- JQuery
 - Card Deck Api
 
 ## Screenshots
