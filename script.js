@@ -1,4 +1,3 @@
-// (function(){
 
 const $card_image = $('#card_image');
 const $val_play = $('#val_play');
@@ -150,6 +149,3 @@ async function nextTurn(){
     let comp_score = await getCardComputer(deck)
     scoreBoard(play_score,comp_score)
 }
-
-
-// })()
