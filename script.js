@@ -10,14 +10,16 @@ let prevCard_play = null;
 let prevCard_comp = null;
 let remainder = null;
 // Health bars
-// let play_health = 20;
-// let comp_health = 20;
+let play_health = 20;
+let comp_health = 20;
 
 function getGameStarted (){
   valTotal_playScore = 0;
   valTotal_compScore = 0;
   document.getElementById('remain_play').innerHTML = 26;
   document.getElementById('zero_cards').innerHTML = " ";
+      document.getElementById("play_health").innerHTML = play_health;
+  document.getElementById("comp_health").innerHTML = comp_health;
   const promise = $.ajax({
       url:'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1'
   });
@@ -125,8 +127,8 @@ function scoreBoard(play_score,comp_score){
       render();
     }
     valTotal_playScore = valTotal_playScore += 1;
-    console.log('Player Score: ' + valTotal_playScore);
-    console.log('Computer Score: ' + valTotal_compScore);
+    // console.log('Player Score: ' + valTotal_playScore);
+    // console.log('Computer Score: ' + valTotal_compScore);
     render();
   }else {
     console.log('Computer won!')
@@ -137,8 +139,8 @@ function scoreBoard(play_score,comp_score){
       render();
     }
     valTotal_compScore = valTotal_compScore += 1;
-    console.log('Player Score: ' + valTotal_playScore);
-    console.log('Computer Score: ' + valTotal_compScore);
+    // console.log('Player Score: ' + valTotal_playScore);
+    // console.log('Computer Score: ' + valTotal_compScore);
     render();
   }
 }
@@ -146,10 +148,26 @@ function render(){
   if(remainder == "0"){
     if(valTotal_playScore > valTotal_compScore){
       document.getElementById('zero_cards').innerHTML = 'You won this round congrats! :)';
+      let diff = valTotal_playScore - valTotal_compScore;
+      comp_health = comp_health - diff;
+      if(comp_health <= "0"){
+        document.getElementById("comp_health").innerHTML = "0";
+        document.getElementById('zero_cards').innerHTML = 'Yay you beat the Computer!';
+        return 0;
+      }
+      document.getElementById("comp_health").innerHTML = comp_health;
     }else if(valTotal_playScore == valTotal_compScore){
       document.getElementById('zero_cards').innerHTML = 'Its a Tie!';
     }else if(valTotal_playScore < valTotal_compScore){
       document.getElementById('zero_cards').innerHTML = 'Computer won this round :(';
+      let diff = valTotal_compScore - valTotal_playScore;
+      play_health = play_health - diff;
+      if(play_health <= "0"){
+        document.getElementById("comp_health").innerHTML = "0";
+        document.getElementById('zero_cards').innerHTML = 'Sorry you Lost!';
+        return 0;
+      }
+      document.getElementById("play_health").innerHTML = play_health;
     }
   };
   console.log(remainder);
@@ -158,9 +176,11 @@ function render(){
 }
 
 async function nextTurn(){
+
   // wait for the play card value
     let play_score = await getCardPlayer(deck)
   // wait for the comp card value
     let comp_score = await getCardComputer(deck)
     scoreBoard(play_score,comp_score)
 }
+
