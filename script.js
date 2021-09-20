@@ -186,3 +186,4 @@ async function nextTurn(){
     let comp_score = await getCardComputer(deck)
     scoreBoard(play_score,comp_score)
 }
+
