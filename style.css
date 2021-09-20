@@ -110,3 +110,11 @@ body {
   text-align: left !important;
 }
 /* info icon */
+#play_health {
+  font-size: 30px;
+  color:red;
+}
+#comp_health {
+  font-size: 30px;
+  color: red;
+}
