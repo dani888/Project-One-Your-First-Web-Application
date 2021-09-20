@@ -2,18 +2,22 @@
 const $card_image = $('#card_image');
 const $val_play = $('#val_play');
 const $val_comp = $('#val_comp');
-const $remain_play= $('#remain_play');
+const $remain_play = $('#remain_play');
 let deck;
 let valTotal_playScore = 0;
 let valTotal_compScore = 0;
 let prevCard_play = null;
 let prevCard_comp = null;
+let remainder = null;
+// Health bars
+// let play_health = 20;
+// let comp_health = 20;
 
 function getGameStarted (){
   valTotal_playScore = 0;
   valTotal_compScore = 0;
   document.getElementById('remain_play').innerHTML = 26;
-  render();
+  document.getElementById('zero_cards').innerHTML = " ";
   const promise = $.ajax({
       url:'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1'
   });
@@ -78,6 +82,7 @@ function getCardComputer(data){
       (data) => {
         // console.log(data)
         document.getElementById('remain_play').innerHTML = (data.remaining / 2);
+        remainder = data.remaining;
         data.cards.map(card=>{
           $('#cards_computer').html($('<img>',{src:card.image}))
           if(card.value == "JACK"){
@@ -138,6 +143,16 @@ function scoreBoard(play_score,comp_score){
   }
 }
 function render(){
+  if(remainder == "0"){
+    if(valTotal_playScore > valTotal_compScore){
+      document.getElementById('zero_cards').innerHTML = 'You won this round congrats! :)';
+    }else if(valTotal_playScore == valTotal_compScore){
+      document.getElementById('zero_cards').innerHTML = 'Its a Tie!';
+    }else if(valTotal_playScore < valTotal_compScore){
+      document.getElementById('zero_cards').innerHTML = 'Computer won this round :(';
+    }
+  };
+  console.log(remainder);
   document.getElementById("player_total").innerHTML = 'Play Score: ' + valTotal_playScore;
   document.getElementById("computer_total").innerHTML = 'Comp Score: ' + valTotal_compScore;
 }
