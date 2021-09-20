@@ -18,7 +18,7 @@ function getGameStarted (){
   valTotal_compScore = 0;
   document.getElementById('remain_play').innerHTML = 26;
   document.getElementById('zero_cards').innerHTML = " ";
-      document.getElementById("play_health").innerHTML = play_health;
+  document.getElementById("play_health").innerHTML = play_health;
   document.getElementById("comp_health").innerHTML = comp_health;
   const promise = $.ajax({
       url:'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1'
@@ -150,6 +150,8 @@ function render(){
       document.getElementById('zero_cards').innerHTML = 'You won this round congrats! :)';
       let diff = valTotal_playScore - valTotal_compScore;
       comp_health = comp_health - diff;
+      let health = document.getElementById("healthBarComp")
+      health.value -= diff; //Or whatever you want to do with it.
       if(comp_health <= "0"){
         document.getElementById("comp_health").innerHTML = "0";
         document.getElementById('zero_cards').innerHTML = 'Yay you beat the Computer!';
@@ -162,8 +164,10 @@ function render(){
       document.getElementById('zero_cards').innerHTML = 'Computer won this round :(';
       let diff = valTotal_compScore - valTotal_playScore;
       play_health = play_health - diff;
+      let health = document.getElementById("healthBarPlay")
+      health.value -= diff; //Or whatever you want to do with it.
       if(play_health <= "0"){
-        document.getElementById("comp_health").innerHTML = "0";
+        document.getElementById("play_health").innerHTML = "0";
         document.getElementById('zero_cards').innerHTML = 'Sorry you Lost!';
         return 0;
       }
@@ -176,11 +180,9 @@ function render(){
 }
 
 async function nextTurn(){
-
   // wait for the play card value
     let play_score = await getCardPlayer(deck)
   // wait for the comp card value
     let comp_score = await getCardComputer(deck)
     scoreBoard(play_score,comp_score)
 }
-
