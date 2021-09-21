@@ -126,6 +126,11 @@ function scoreBoard(play_score,comp_score){
       render();
     }
     valTotal_playScore = valTotal_playScore += 1;
+<<<<<<< HEAD
+=======
+    // console.log('Player Score: ' + valTotal_playScore);
+    // console.log('Computer Score: ' + valTotal_compScore);
+>>>>>>> f160abe6a3ff03bd65b1984f0de3fcc533862499
     render();
   }else {
     console.log('Computer won!')
