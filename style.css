@@ -61,10 +61,12 @@
 /* BUTTON ^ */
 body {
   /* margin: 0 */
-  background-image:url("https://images.unsplash.com/photo-1595280503243-a79c68afe418?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80");
+  background-image:url("https://images.unsplash.com/photo-1595689710263-1355f36c08d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2600&q=80");
   background-size: cover;
+  font-family: 'Courier New', monospace;
+  /* font-size: 15px; */
 }
-
+/* https://images.unsplash.com/photo-1595280503243-a79c68afe418?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80 */
 #player_total{
   padding: 10px 10px 10px 10px;
   border-style: solid;
@@ -76,20 +78,21 @@ body {
 /* info icon */
 /* Credit to: https://codepen.io/EasyBoarder/pen/Lkzzjy */
 * {
-  transition: all 1.2s ease;
+  transition: all 1.5s ease;
 }
 
 .extra-info {
   display: none;
   line-height: 30px;
-  font-size: 20px;
+  font-size: 25px;
 	position: center;
-  text-align: center;
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.75)), url(https://images.unsplash.com/photo-1529480384838-c1681c84aca5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80);
+  text-align: left;
+  padding-left: 30px;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.80)), url(https://images.unsplash.com/photo-1529480384838-c1681c84aca5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80);
   background-size: cover;
   border-radius: 50px;
   color: black;
-  font-family: "URW Chancery L", cursive;
+  font-family: 'Courier New', monospace;
 }
 
 .info:hover .extra-info {
@@ -106,7 +109,54 @@ body {
 .info:hover {
   /* background-color: white; */
   padding: 5px 5px 5px 5px;
-  width: 850px;
+  width: 750px;
   text-align: left !important;
 }
 /* info icon */
+
+.zero{
+  font-size: 30px;
+}
+/* Health Bars */
+#play_health {
+  font-size: 30px;
+  color:red;
+}
+#comp_health {
+  font-size: 30px;
+  color: red;
+}
+
+#to_war{
+  width: 300px;
+  border-radius: 20px;
+}
+
+
+
+
+.popup .popuptext {
+visibility: hidden;
+/* background-color: #555; */
+color: #fff;
+text-align: center;
+border-radius: 30px;
+padding-right: 10px;
+
+}
+.popup .show {
+visibility: visible;
+-webkit-animation: fadeIn 1s;
+animation: fadeIn 1s;
+}
+.popup .hide {
+visibility: collapse;
+}
+@-webkit-keyframes fadeIn {
+from {opacity: 0;} 
+to {opacity: 1;}
+}
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
