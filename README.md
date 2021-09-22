@@ -10,9 +10,9 @@ A Simple Web Application Where you can play the cards War game against the compu
 - JQuery
 
 ## Screenshots
-<img src="/images/screenshot1WarGame.jpg" width="800" height="500">
-<img src="/images/screenshot2WarGame.jpg" width="800" height="500">
-<img src="/images/screenshot3WarGame.jpg" width="800" height="500">
+<img src="/images/screenshot1WarGame.jpg" width="1000" height="500">
+<img src="/images/screenshot2WarGame.jpg" width="1000" height="500">
+<img src="/images/screenshot3WarGame.jpg" width="1000" height="500">
 
 
 ## Getting Started
