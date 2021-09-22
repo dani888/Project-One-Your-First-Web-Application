@@ -9,9 +9,9 @@ A Simple Web Application Where you can play the cards War game against the compu
 - Card Deck Api
 
 ## Screenshots
-<img src="/images/screenshot1WarGame.jpg" width="100" height="100">
-<img src="/images/screenshot2WarGame.jpg" width="100" height="100">
-<img src="/images/screenshot3WarGame.jpg" width="100" height="100">
+<img src="/images/screenshot1WarGame.jpg" width="500" height="400">
+<img src="/images/screenshot2WarGame.jpg" width="500" height="400">
+<img src="/images/screenshot3WarGame.jpg" width="500" height="400">
 
 
 ## Getting Started
