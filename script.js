@@ -12,15 +12,22 @@ let remainder = null;
 let play_health = 20;
 let comp_health = 20;
 
+const BASE_URL = 'https://deckofcardsapi.com/api/deck/';
+
+
 function getGameStarted (){
+  if(play_health <= "0" || comp_health <= "0"){
+    return 0;
+  }
   valTotal_playScore = 0;
   valTotal_compScore = 0;
   document.getElementById('remain_play').innerHTML = 26;
   document.getElementById('zero_cards').innerHTML = " ";
   document.getElementById("play_health").innerHTML = play_health;
   document.getElementById("comp_health").innerHTML = comp_health;
+  
   const promise = $.ajax({
-      url:'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1'
+      url:`${BASE_URL}new/shuffle/?deck_count=1`
   });
   // card player
   promise.then(
@@ -38,7 +45,7 @@ function getGameStarted (){
 function getCardPlayer(data){
   let deck_id = data.deck_id
   const promise1 = $.ajax({
-      url:'https://deckofcardsapi.com/api/deck/' + deck_id + '/draw/?count=1'
+      url:`${BASE_URL}` + deck_id + '/draw/?count=1'
   });
   // computer card
   // promise to return the card value
@@ -75,7 +82,7 @@ function getCardPlayer(data){
 function getCardComputer(data){
   let deck_id = data.deck_id
   const promise2 = $.ajax({
-      url:'https://deckofcardsapi.com/api/deck/' + deck_id + '/draw/?count=1'
+      url:`${BASE_URL}` + deck_id + '/draw/?count=1'
   });
 
   let prom = new Promise((resolve, reject) => {
@@ -118,7 +125,6 @@ function scoreBoard(play_score,comp_score){
     return 0;
   }
   if(play_score > comp_score){
-    console.log('player won!')
     if(prevCard_play != null && prevCard_comp != null){
       valTotal_playScore = valTotal_playScore += 1;
       valTotal_compScore = valTotal_compScore -= 1;
@@ -128,7 +134,6 @@ function scoreBoard(play_score,comp_score){
     valTotal_playScore = valTotal_playScore += 1;
     render();
   }else {
-    console.log('Computer won!')
     if(prevCard_play != null && prevCard_comp != null){
       valTotal_playScore = valTotal_playScore -= 1;
       valTotal_compScore = valTotal_compScore += 1;
@@ -149,7 +154,7 @@ function render(){
       health.value -= diff;
       if(comp_health <= "0"){
         document.getElementById("comp_health").innerHTML = "0";
-        document.getElementById('zero_cards').innerHTML = 'Yay you beat the Computer!';
+        document.getElementById('zero_cards').innerHTML = 'Yay you beat the Computer! Reset to play again!';
         return 0;
       }
       document.getElementById("comp_health").innerHTML = comp_health;
@@ -163,25 +168,28 @@ function render(){
       health.value -= diff;
       if(play_health <= "0"){
         document.getElementById("play_health").innerHTML = "0";
-        document.getElementById('zero_cards').innerHTML = 'Sorry you Lost!';
+        document.getElementById('zero_cards').innerHTML = 'Sorry you Lost! Reset to play again!';
         return 0;
       }
       document.getElementById("play_health").innerHTML = play_health;
     }
   };
-  console.log(remainder);
   document.getElementById("player_total").innerHTML = 'Play Score: ' + valTotal_playScore;
   document.getElementById("computer_total").innerHTML = 'Comp Score: ' + valTotal_compScore;
 }
 
 async function nextTurn(){
-  // wait for the play card value
+  if(play_health > "0" && comp_health > "0"){
+    // wait for the play card value
     let play_score = await getCardPlayer(deck)
-  // wait for the comp card value
+    // wait for the comp card value
     let comp_score = await getCardComputer(deck)
     scoreBoard(play_score,comp_score)
+  }else {
+    return 0;
+  }
 }
-// fun video button
+
 function playVideo() {
 var popup = document.getElementById("myPopup");
 popup.classList.toggle("show");
