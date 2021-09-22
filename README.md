@@ -3,10 +3,11 @@
 A Simple Web Application Where you can play the cards War game against the computer.
 
 ## Technologies used
-- HTMLt
+- HTML5
 - CSS3
 - JavaScript
 - Card Deck Api
+- JQuery
 
 ## Screenshots
 <img src="/images/screenshot1WarGame.jpg" width="800" height="500">
@@ -15,7 +16,7 @@ A Simple Web Application Where you can play the cards War game against the compu
 
 
 ## Getting Started
- -Wars Card Game Guide:            
+ - Wars Card Game Guide:            
 1. The game starts off with a shuffled deck of 52 cards.
 2. To start the game press the Start New Game button!
 3. There are 26 card draws in a set using the draw card button.
