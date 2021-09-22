@@ -9,7 +9,7 @@ A Simple Web Application Where you can play the cards War game against the compu
 - Card Deck Api
 
 ## Screenshots
-![Wars Card Game](/images/screenshot1WarGame.jpg.jpg "Front-end Screenshot")
+![Wars Card Game](/images/screenshot1WarGame.jpg "Front-end Screenshot")
 
 
 
