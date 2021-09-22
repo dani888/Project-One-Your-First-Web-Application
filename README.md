@@ -10,6 +10,7 @@ A Simple Web Application Where you can play the cards War game against the compu
 
 ## Screenshots
 ![Wars Card Game](/images/screenshot1WarGame.jpg "Front-end Screenshot")
+![Wars Card Game](/images/screenshot2WarGame.jpg "Front-end Screenshot")
 
 
 
