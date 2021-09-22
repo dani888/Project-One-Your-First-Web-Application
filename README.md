@@ -9,12 +9,9 @@ A Simple Web Application Where you can play the cards War game against the compu
 - Card Deck Api
 
 ## Screenshots
-![Wars Card Game](/images/screenshot1WarGame.jpg "Front-end Screenshot" =300x200)
-![Wars Card Game](/images/screenshot2WarGame.jpg "Front-end Screenshot" =300x200)
-
-
-
-
+![Wars Card Game](/images/screenshot1WarGame.jpg "Front-end Screenshot")
+![Wars Card Game](/images/screenshot2WarGame.jpg "Front-end Screenshot")
+![Wars Card Game](/images/screenshot3WarGame.jpg "Front-end Screenshot")
 
 
 ## Getting Started
@@ -28,6 +25,7 @@ A Simple Web Application Where you can play the cards War game against the compu
 6. You and the Computer will have 20 Health Points at the start of the game. At the end of each set of cards the difference in points will determine how much health is lost for whoever lost the round.
 7. The Goal is to get the computers health points to 0 and Win the game.
 8. Good Luck!
-
+            
+          https://danielw-war-card-game-app.netlify.app/
 
 ## Future Enhancements
