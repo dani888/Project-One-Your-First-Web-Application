@@ -15,8 +15,7 @@ A Simple Web Application Where you can play the cards War game against the compu
 
 
 ## Getting Started
-                Wars Card Game Guide:
-                
+ -Wars Card Game Guide:            
 1. The game starts off with a shuffled deck of 52 cards.
 2. To start the game press the Start New Game button!
 3. There are 26 card draws in a set using the draw card button.
@@ -26,6 +25,8 @@ A Simple Web Application Where you can play the cards War game against the compu
 7. The Goal is to get the computers health points to 0 and Win the game.
 8. Good Luck!
             
-          https://danielw-war-card-game-app.netlify.app/
+  https://danielw-war-card-game-app.netlify.app/
 
 ## Future Enhancements
+- Update the Design of the application.
+- Add new features such as a betting system.
