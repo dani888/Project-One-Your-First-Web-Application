@@ -198,4 +198,10 @@ to {opacity:1 ;}
     align-items: center;
     text-align: center;
   }
+  .hidden{
+    display: none;
+  }
+  .popup{
+    display: none;
+  }
 }
