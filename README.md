@@ -9,17 +9,17 @@ A deck will be shuffled and split evenly between two players. whoever has the hi
 - CSS3
 - JavaScript
 - JQuery
-- Card Deck Api
+- <a href="https://deckofcardsapi.com/">Card Deck Api</a> 
 
 ## Screenshots
 - "Starting View"
-<img src="./images/screenshot1WarGame.jpg" width="700" height="500">
+<img src="./images/screenshot1WarGame.jpg" width="750" height="500">
 
 - "View after you shuffle a deck and start"
-<img src="/images/screenshot2WarGame.jpg" width="700" height="500">
+<img src="/images/screenshot2WarGame.jpg" width="750" height="500">
 
 - "Veiw of middle of game"
-<img src="/images/screenshot3WarGame.jpg" width="700" height="500">
+<img src="/images/screenshot3WarGame.jpg" width="750" height="500">
 
 
 
