@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script defer src="./script.js"></script>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Wars Card Game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
+	</script>
+	<script defer src="./script.js">
+	</script>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<title>Wars Card Game</title>
 </head>
+
 <body>
-      <center>
-      <h1>Welcome to Wars Card Game!</h1>
-      <img src="https://i.giphy.com/media/2z6x8UzzCdBBu/giphy.webp" id="to_war"><p>
+	<center>
+		<h1>Welcome to Wars Card Game!</h1>
+		<img src="https://i.giphy.com/media/2z6x8UzzCdBBu/giphy.webp" id="to_war"><p>
        <button class="hover" id="button" onClick="window.location.reload();">Reset Game</button>
       <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
       <div>
@@ -20,43 +24,43 @@
             <i class="icon-info-sign"></i>
             <!-- info button https://codepen.io/EasyBoarder/pen/Lkzzjy</span> -->
             <span class="extra-info">
-              <center><b>Wars Card Game Guide:</center><br><br>
-              1.) The game starts off with a shuffled deck of 52 cards.<br><br>
-              2.) To start the game press the Start New Game button!<br><br>
-              3.) There are 26 card draws in a set using the draw card button.<br><br>
-              4.) To earn points you will have to play a higher card than the computer<br><br>
-              5.) If You and the computer get the same card value you will draw another set of cards and whoever wins the round after the draw will get 3 Points!<br><br>
-              6.) You and the Computer will have 20 Health Points at the start of the game. At the end of each set of cards the difference in points will determine how much health is lost for whoever lost the round.<br><br>
-              7.) The Goal is to get the computers health points to 0 and Win the game.<br><br>
+              <center><b>Wars Card Game Guide:</center><br>
+              <p>1.) The game starts off with a shuffled deck of 52 cards.</p>
+              <p>2.) To start the game press the Start New Game button!</p>
+              <p>3.) There are 26 card draws in a set using the draw card button.</p>
+              <p>4.) To earn points you will have to play a higher card than the computer.</p>
+              <p>5.) If You and the computer get the same card value you will draw another set of cards and whoever wins the round after the draw will get 3 Points!</p>
+              <p>6.) You and the Computer will have 20 Health Points at the start of the game. At the end of each set of cards the difference in points will determine how much health is lost for whoever lost the round.</p>
+              <p>7.) The Goal is to get the computers health points to 0 and Win the game.</p>
               <center>Good Luck!</b></center>
             </span>
           </div>
       </div>
       <h2>
-       Player's Health: 
-      <span class="health" id="play_health"></span>
-      <progress id="healthBarPlay" value="20" max="20"></progress>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       Computer's Health:
-      <span class="health" id="comp_health"></span>
-      <progress id="healthBarComp" value="20" max="20"></progress><br><br>
-      
+      <div id="phone_hp">
+        Player's Health: 
+        <span class="health" id="play_health"></span>
+        <progress id="healthBarPlay" value="20" max="20"></progress>
+        Computer's Health:
+        <span class="health" id="comp_health"></span>
+        <progress id="healthBarComp" value="20" max="20"></progress>
+      </div><br>
       <span class="zero" id="zero_cards"></span><br><br>
       Player Card Value: <span class="span" id="val_play"></span><br><br>
       <div id="cards_player">
+      </div><br>
+      <div id="flex">
+        <span class="span1" id="player_total">Play Score 0</span>
+        <button class="hover" id="button" onclick="getGameStarted()">Shuffle Deck</button>
+        <span class="span" id="remain_play"></span>
+        <button class="hover" id="button" onclick="nextTurn()">Draw Card</button>
+        <span class="span2" id="computer_total">Comp Score 0</span>
       </div>
-      <br>
-      <span class="span1" id="player_total">Play Score 0</span>
-      <button class="hover" id="button" onclick="getGameStarted()">Shuffle Deck</button>
-      <span class="span" id="remain_play"></span>
-      <button class="hover" id="button" onclick="nextTurn()">Draw Card</button>
-      <span class="span2" id="computer_total">Comp Score 0</span>
       <br>
       Computer Card Value: <span class="span" id="val_comp"></span><br><br>
       <div id="cards_computer">
       </div>
       <br><br><br>
-      
       Take a break with a fun LOTR Video<br>
       </h2>
       <div class="popup">
@@ -65,11 +69,6 @@
       <source src="https://img-9gag-fun.9cache.com/photo/aeAn9R5_460svav1.mp4" type="video/mp4">
       </video>
       </div>
-      <!-- <video width="420" height="340" frameBorder="0" style="border-raduis: 40px;" controls>
-        <source src="https://img-9gag-fun.9cache.com/photo/aeAn9R5_460svav1.mp4" type="video/mp4">
-        <!-- <source src="movie.ogg" type="video/ogg"> -->
-      <!-- </video> -->
-      </center>
-      
+      </center>     
 </body>
 </html>
