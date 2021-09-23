@@ -1,4 +1,3 @@
-const $card_image = $('#card_image');
 const $val_play = $('#val_play');
 const $val_comp = $('#val_comp');
 const $remain_play = $('#remain_play');
