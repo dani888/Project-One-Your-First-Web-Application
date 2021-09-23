@@ -1,6 +1,6 @@
 # Cards War Game
 
-A Simple Web Application Where you can play the cards War game against the computer using the Card API
+A simple web application based on the War card game where you will play against the computer using the Card API. War relies entirely on the luck of the draw and involves no strategic elements. Originaly each player turns up a card at the same time and the player with the higher card takes both cards and puts them under his deck. In the original game the purpose of the game is to win all the cards from the other player. Playing the game in the original format could take from 10-40 minutes. Therefore I have crafted my own version of the card game Wars. A deck will be shuffled and split evenly between two players. whoever has the higher card gain 1 point. In the case you and the computer draw the same card value. Both will draw another set of cards and whoever wins the round after the draw will recieve 3 Points! The computer and player will start off with 20 health points at the beginning of the game. In the end of a set of 26 card draws, the difference in score will determine how much health the player or computer lose depending on who received a lower score at the end of a set of cards. You will be able to play through multiple sets of card until you, the player or computer lose 20 points of health.
 
 ## Technologies used
 - HTML5
@@ -11,13 +11,13 @@ A Simple Web Application Where you can play the cards War game against the compu
 
 ## Screenshots
 - "Starting View"
-<img src="/images/screenshot1WarGame.jpg" width="1100" height="500">
+<img src="/images/screenshot1WarGame.jpg" width="700" height="300">
 
 - "View after you shuffle a deck and start"
-<img src="/images/screenshot2WarGame.jpg" width="1100" height="500">
+<img src="/images/screenshot2WarGame.jpg" width="700" height="300">
 
 - "Veiw of middle of game"
-<img src="/images/screenshot3WarGame.jpg" width="1100" height="500">
+<img src="/images/screenshot3WarGame.jpg" width="700" height="300">
 
 
 
