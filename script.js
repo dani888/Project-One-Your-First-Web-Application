@@ -52,7 +52,6 @@ function getCardPlayer(data){
   let prom = new Promise((resolve, reject) => {
     promise1.then(
       (data) => {
-        // console.log(data)
         data.cards.map(card=>{
           $('#cards_player').html($('<img>',{src:card.image}))
           if(card.value == "JACK"){
