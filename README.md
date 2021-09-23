@@ -1,13 +1,13 @@
 # Cards War Game
 
-A Simple Web Application Where you can play the cards War game against the computer.
+A Simple Web Application Where you can play the cards War game against the computer using the Card API
 
 ## Technologies used
 - HTML5
 - CSS3
 - JavaScript
-- Card Deck Api
 - JQuery
+- Card Deck Api
 
 ## Screenshots
 - "Starting View"
