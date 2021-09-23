@@ -24,7 +24,7 @@ A Simple Web Application Where you can play the cards War game against the compu
 ## Getting Started
  - Wars Card Game Guide:            
 1. The game starts off with a shuffled deck of 52 cards.
-2. To start the game press the Start New Game button!
+2. To start the game press the Shuffle Cards button!
 3. There are 26 card draws in a set using the draw card button.
 4. To earn points you will have to play a higher card than the computer.
 5. If You and the computer get the same card value you will draw another set of cards and whoever wins the round after the draw will get 3 Points!
