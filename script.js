@@ -86,7 +86,6 @@ function getCardComputer(data){
   let prom = new Promise((resolve, reject) => {
     promise2.then(
       (data) => {
-        // console.log(data)
         document.getElementById('remain_play').innerHTML = (data.remaining / 2);
         remainder = data.remaining;
         data.cards.map(card=>{
