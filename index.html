@@ -6,20 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
+
 	</script>
 	<script defer src="./script.js">
+
 	</script>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<title>Wars Card Game</title>
 </head>
 
 <body>
-       <center>
-       <h1>Welcome to Wars Card Game!</h1>
-       <img src="https://i.giphy.com/media/2z6x8UzzCdBBu/giphy.webp" id="to_war"><p>
+	<div class="wrap">
+    <div class="flex_column">
+		<h1>Welcome to Wars Card Game!</h1>
+		<img src="https://i.giphy.com/media/2z6x8UzzCdBBu/giphy.webp" id="to_war"><p>
        <button class="hover" id="button" onClick="window.location.reload();">Reset Game</button>
       <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-      <div>
+        <div>
           <div class="info">
             <i class="icon-info-sign"></i>
             <!-- info button https://codepen.io/EasyBoarder/pen/Lkzzjy</span> -->
@@ -35,43 +38,56 @@
               <center>Good Luck!</b></center>
             </span>
           </div>
+        </div>
       </div>
-      <h2>
-      <div id="flex">
-        Player's Health: 
-        <span class="health" id="play_health"></span>
-        <progress id="healthBarPlay" value="20" max="20"></progress>
-        Computer's Health:
-        <span class="health" id="comp_health"></span>
-        <progress id="healthBarComp" value="20" max="20"></progress>
+      <div class="flex-parent">
+        <div>
+          <h2>Player's Health:</h2>
+          <span class="health" id="play_health"></span>
+          <progress id="healthBarPlay" value="20" max="20"></progress>
+        </div>
+        <div>
+          <h2>Computer's Health:</h2>
+          <span class="health" id="comp_health"></span>
+          <progress id="healthBarComp" value="20" max="20"></progress>
+        </div>
       </div>
       <br>
       <span class="zero" id="zero_cards"></span><br><br>
-      Player Card Value: <span class="span" id="val_play"></span><br><br>
-      <div id="cards_player">
-      </div><br>
-      <div id="flex">
+      <br>
+      <div class="flex-parent">
         <span class="span1" id="player_total">Play Score 0</span>
         <button class="hover" id="button" onclick="getGameStarted()">Shuffle Deck</button>
-        <span class="span" id="remain_play"></span>
+        <h2><span class="span" id="remain_play"></span></h2>
         <button class="hover" id="button" onclick="nextTurn()">Draw Card</button>
-        <span class="span2" id="computer_total">Comp Score 0</span>
-      </div>
-      <br>
-      Computer Card Value: <span class="span" id="val_comp"></span><br><br>
-      <div id="cards_computer">
+        <span class="span2" id="computer_total">Comp Score 0</span><br>
+        </div><br>
+      <div class="flex-parent">
+        <div>
+          <h2>Player Card Value:</h2><span class="span" id="val_play"></span><br><br>
+          <div id="cards_player">
+          </div>
+        </div>
+        <div>
+          <h2>Computer Card Value:</h2><span class="span" id="val_comp"></span><br><br>
+          <div id="cards_computer">
+          </div>
+        </div>
       </div>
       <br><br><br>
+    <div class="flex_column">
       <div class="hidden">
+        <h2>
         Take a break with a fun LOTR Video<br>
         </h2>
         <div class="popup">
           <button class="hover" onclick="playVideo()" >Play | Stop</button><br><br>
           <video class="popuptext" id="myPopup" style="width:300px;" >
           <source src="https://img-9gag-fun.9cache.com/photo/aeAn9R5_460svav1.mp4" type="video/mp4">
-        </video>
+          </video>
         </div>
       </div>
-      </center>     
+    </div>
+    </div>    
 </body>
 </html>
