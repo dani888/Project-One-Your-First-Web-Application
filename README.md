@@ -13,13 +13,13 @@ A deck will be shuffled and split evenly between two players. whoever has the hi
 
 ## Screenshots
 - "Starting View"
-<img src="./images/screenshot1WarGame.jpg" width="750" height="600">
+<img src="./images/screenshot1WarGame.jpg" width="550" height="600">
 
 - "View after you shuffle a deck and start"
-<img src="/images/screenshot2WarGame.jpg" width="750" height="600">
+<img src="/images/screenshot2WarGame.jpg" width="550" height="600">
 
 - "Veiw of middle of game"
-<img src="/images/screenshot3WarGame.jpg" width="750" height="600">
+<img src="/images/screenshot3WarGame.jpg" width="550" height="600">
 
 
 
