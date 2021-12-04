@@ -34,7 +34,7 @@ A deck will be shuffled and split evenly between two players. whoever has the hi
 7. The Goal is to get the computers health points to 0 and Win the game.
 8. Good Luck!
             
-  https://danielw-war-card-game-app.netlify.app/
+  https://card-game-app.netlify.app
 
 ## Future Enhancements
 - Update the Design of the application.
